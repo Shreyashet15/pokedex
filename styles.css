@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #9079a8;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 20px 20px;
+  background: #ffaea5;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+.card:hover {
+  transform: translateX(50%);
+  z-index: 500;
+}
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  z-index: 1;
+  transform-style: preserve-3d;
+  background: #ffaea5;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+}
+.card:hover .imgBox {
+  transform: rotateY(-180deg);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+.card .imgBox img {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.card .imgBox div {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+}
+
+.card:hover .imgBox div {
+  transform: rotateY(180deg);
+}
+
+.card .imgBox img:nth-child(2) {
+  transform: rotateY(180deg);
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .details .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-box {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.stats {
+  /* font-family: 'Gluten', cursive; */
+  font-family: "Lobster Two", cursive;
+  border-style: dotted;
+  border-color: rebeccapurple;
+}
+
+.abilities {
+  font-family: "Lobster Two", cursive;
+  border-style: outset;
+  border-color: rebeccapurple;
+}
+
+.name-container {
+  font-family: "Gluten", cursive;
+  text-transform: capitalize;
+  font-size: 25px;
+  background-color: #ffaea5;
+  width: 200px;
+  border: 2px solid #f2f2f2;
+  border-radius: 50px;
+  border-color: slateblue;
+  border-style: groove;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: salmon;
+}
+
+.headings1 {
+  font-family: "Gluten", cursive;
+
+  margin-bottom: 25px;
+}
+
+.headings2 {
+  font-family: "Gluten", cursive;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.left,
+.right {
+  width: 100px;
+  height: 100px;
+  transition: 0.5%;
+  float: left;
+  box-shadow: -2px 2px #3c1361;
+}

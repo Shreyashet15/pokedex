@@ -29,7 +29,7 @@ function makeGetRequest(path) {
   );
 }
 let pokemons = makeGetRequest(
-  "https://pokemon-json-demo-api.herokuapp.com/pokemon?_page=1&_limit=16"
+  "https://pokemon-json-demo-api.herokuapp.com/pokemon?_page=2&_limit=32"
 );
 let renderAbilities = (data) => {
   let string = "<div>";
@@ -47,13 +47,12 @@ function renderStats(data) {
   });
   string += "</div>";
   return string;
-  
 }
 
-// nextBtn.addEventListner("click" , event => {
+// nextBtn.addEventListner("click", (event) => {
 //   nextBtn.abilities = `click nextBtn : event.${ability.ability.name}`;
-  
-//   fetchPokeList("https://pokemon-json-demo-api.herokuapp.com/pokemon?_page=16&limit32");
 
-  
+//   fetchPokeList(
+//     "https://pokemon-json-demo-api.herokuapp.com/pokemon?_page=16&limit32"
+//   );
 // });

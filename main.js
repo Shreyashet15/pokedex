@@ -2,7 +2,7 @@ function makeGetRequest(path) {
   axios.get(path).then(
     (response) => {
       var result = response.data;
-      console.log(result);
+      // console.log(result);
       result.forEach((pokemon) => {
         document.getElementById("main-box").innerHTML += ` <div class="card">
       <div class="imgBox">
